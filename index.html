@@ -19,14 +19,18 @@
   </head>
 
   <body>
-    <input type="button" value="일반" onclick="
-    document.querySelector('body').style.backgroundColor='white'
-    document.querySelector('body').style.color='black'
-    ">
-    <input type="button" value="혁명" onclick="
-    document.querySelector('body').style.backgroundColor='red'
-    document.querySelector('body').style.color='yellow'
-    ">
+    <input id="night_day" type="button" value="야간" onclick="
+    var target = document.querySelector('body');
+    if(this.value === '야간') {
+    target.style.backgroundColor='black';
+    target.style.color='white';
+    this.value = '주간';
+  } else {
+    target.style.backgroundColor='white'
+    target.style.color='black'
+    this.value = '야간';
+  }
+  ">
   <a href="index.html" id="title"> <h1>  CAT </h1> </a>
   <div id="grid">
     <ol>
